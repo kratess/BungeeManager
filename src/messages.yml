@@ -1,0 +1,6 @@
+false_premium: "&4There was an error. Please contact an administrator"
+
+no_cmd: "Console cannot execute that command!"
+not_premium: "You're account is not premium!"
+already_in_list: "You'be been already added to premium users!"
+added_to_list: "You've been added to premium users. Please rejoin"

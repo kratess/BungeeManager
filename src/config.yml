@@ -1,0 +1,56 @@
+# DON'T CHANGE THIS
+config_version: 1.0
+
+# CHANGE AT YOUR OWN RISK !!!
+# REMEMBER THAT THIS PLUGIN MANAGES ALL YOUR NETWORK SECURITY AND A POSSIBLE BUG COULD MAKE IT VULNERABLE
+check_for_updates: true
+
+anti_vpn:
+  # AutoDownloadFiles config
+  check_files: true
+  autodownload_files: true
+
+anti_bot:
+  # Our antibot is working in progress so will be finishd soon
+  use_anti_bot: true
+
+protocol:
+  # Custom version protocol for proxy. Leave empty if you don't want to change
+  name: "MyProxy 1.8 - 1.15.2"
+
+  # For all custom version protocol check https://wiki.vg/Protocol_version_numbers
+  # If you don't want to use custom protocols write this: custom: {}
+  custom:
+    <47: "Use version above or equal to 1.8"
+    47: "You're using 1.8"
+    550-578: "Instead of 1.15 use 1.14 with optifine"
+    '>578': "We don't accept your version"
+
+
+premium_lock:
+  use_premium_lock: true
+
+  # If false only players written in
+  all_users: true
+
+  # This option is only used if all_users is false
+  command: "premium"
+
+  # Name of Hub / Lobby server without authme
+  # Switch server must support all version of your bungee connections
+  switch_server: Hub
+
+server_list:
+  use_motd: true
+
+  motd: |-
+    &6Join our new minecraft server!
+    &eMade with love and BungeeManager ❤
+
+  use_hover: true
+
+  hover: |-
+    &7This server use BungeeManager
+
+    &7Leave a review on our spigot page...
+    &7Thanks

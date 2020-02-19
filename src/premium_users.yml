@@ -1,0 +1,6 @@
+# users:
+#   kratess:127.0.127.1
+#   creeper:127.82.31.97
+# If you want only to secure name withour secure a ip write 0
+#   onlyname:0
+users: {}
