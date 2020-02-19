@@ -9,6 +9,7 @@ import me.kratess.bungeemanager.serverlist.Hover;
 import me.kratess.bungeemanager.serverlist.Motd;
 import me.kratess.bungeemanager.utils.CheckUser;
 import me.kratess.bungeemanager.utils.FilesManager;
+import me.kratess.bungeemanager.utils.Metrics;
 import me.kratess.bungeemanager.utils.SpigotChecker;
 import net.md_5.bungee.api.plugin.Plugin;
 
@@ -22,7 +23,7 @@ public class Main extends Plugin {
     public void onEnable() {
         instance = this;
 
-        //getProxy().getScheduler().schedule(this, new CheckSpigotEveryTime(), 0, 30, TimeUnit.MINUTES);
+        getProxy().getScheduler().schedule(this, new CheckSpigotEveryTime(), 0, 30, TimeUnit.MINUTES);
 
         new FilesManager();
 
@@ -70,7 +71,9 @@ public class Main extends Plugin {
             getProxy().getPluginManager().registerListener(this, new Hover());
         }
 
-        getLogger().info("BungeeManager has been activated"); // and SpigotUpdater is successfully working
+        Metrics metrics = new Metrics(this, 6552);
+
+        getLogger().info("BungeeManager has been activated and SpigotUpdater is successfully working");
         getLogger().info("It is advisable to manually check the new versions");
 
     }
